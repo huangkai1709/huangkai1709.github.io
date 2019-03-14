@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body {
+				margin: 0px;
+			}
+			.dd{
+				width: 200px;
+				height: 200px;
+				background-color: deeppink;
+			    transition: width 5s ;
+			}
+			.dd:hover{
+				width: 30px;
+			}
+			.wrap {
+				position: relative;
+				width: 983px;
+				height: 460px;
+			}
+			
+			.item {
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				display: inline-block;
+				color: white;
+				font-weight: 200;
+				transition:all 0.8s;
+				opacity: 0;
+			}
+			
+			.item:nth-child(1) {
+				background-color: black;
+			}
+			
+			.item:nth-child(2) {
+				background-color: green;
+			}
+			
+			.item:nth-child(3) {
+				background-color: pink;
+			}
+			
+			.item:nth-child(4) {
+				background-color: #ff6700;
+			}
+			
+			.item:nth-child(5) {
+				background-color: goldenrod;
+			}
+			
+			.btn {
+				z-index: 1000;
+				position: absolute;
+				top: 195px;
+				width: 41px;
+				height: 69px;
+				border: 0px;
+				padding: 0px;
+			}
+			
+			#goNextBtn {
+				right:0px;
+			}
+			
+			.item.active {
+				z-index: 100;
+				opacity: 1;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="dd"></div>
+		<div class="wrap">
+			<div class="item active">0</div>
+			<div class="item">1</div>
+			<div class="item">2</div>
+			<div class="item">3</div>
+			<div class="item">4</div>
+
+			<button class="btn" id="goProBtn"><</button>
+			<button class="btn" id="goNextBtn">></button>
+
+		</div>
+
+		<script type="text/javascript">
+			var items = document.getElementsByClassName("item");
+			var goPro = document.getElementById("goProBtn");
+			var goNext = document.getElementById("goNextBtn");
+			var i = 0
+			var clear = function() {
+				for(var j = 0; j < items.length; j++) {
+					items[j].className = "item"
+				}
+			}
+			var goProClick = function() {
+				if(i > 0) {
+					i--;
+				} else {
+					i = 4;
+				}
+				clear();
+				items[i].className += " active";
+				console.log(i);
+			}
+			var goNextClick = function() {
+				if(i < 4) {
+					i++;
+				} else {
+					i = 0;
+				}
+				clear();
+				items[i].className = "item active";
+				console.log(i);
+			}
+			goPro.addEventListener("click", function(){
+				goProClick();
+			})
+			goNext.addEventListener("click", function(){
+				goNextClick();
+			})
+			console.log(i)
+		</script>
+	</body>
+
+</html>
