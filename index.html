@@ -180,6 +180,88 @@
 
 
   
+    <article id="post-初识git" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/04/03/初识git/" class="article-date">
+  <time datetime="2019-04-03T00:59:45.000Z" itemprop="datePublished">2019-04-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/04/03/初识git/">markdown</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="git的作用"><a href="#git的作用" class="headerlink" title="git的作用"></a>git的作用</h1><ul>
+<li>分布式版本控制</li>
+<li>多开发人员协调工作</li>
+<li>有效监听谁做的修改</li>
+<li>本地及远程操作</li>
+</ul>
+<hr>
+<h1 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h1><ul>
+<li>git config –global user.name&nbsp;”user”</li>
+<li>git config –global user.emal&nbsp;”<a href="mailto:xxx@xxx.com" target="_blank" rel="noopener">xxx@xxx.com</a>“</li>
+</ul>
+<hr>
+<h1 id="git指令"><a href="#git指令" class="headerlink" title="git指令"></a>git指令</h1><ol>
+<li><p>git init       //初始化本地仓库</p>
+</li>
+<li><p>git add<file>  //添加文件</file></p>
+</li>
+<li>git rm –cached<file>   //删除文件</file></li>
+<li>git status     //查看状态<ul>
+<li>本地仓库修改时status会改变</li>
+</ul>
+</li>
+<li>git commit     //提交<ul>
+<li>添加提交信息 :wq退出</li>
+<li>git commit -m ‘changed index.html’ //提交并且备注</li>
+</ul>
+</li>
+<li>git push       //推送到仓库</li>
+<li>git pull       //从远程仓库拉取数据</li>
+<li>git clone 仓库地址     //从远程仓库拷贝数据</li>
+<li>touch .gitignore //创建文件，创建忽略文件<ul>
+<li>在.gitignore中添加需要忽略的文件路径</li>
+<li>文件log.txt    </li>
+<li>文件夹/dir1</li>
+</ul>
+</li>
+<li>git branch xxx //创建分支 <ul>
+<li>git checkout xxx //进入xxx分支</li>
+<li>git checkout master //回到主线</li>
+<li>主线与分支不会相互影响</li>
+</ul>
+</li>
+<li>git merge xxx //在master使用该指令能够合并xxx分支</li>
+<li>git remote add origin 仓库地址 //与仓库对接</li>
+</ol>
+<hr>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/04/03/初识git/" data-id="cju0lauql0000xouid7hfpsrr" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/04/03/hello-world/" class="article-date">
@@ -257,6 +339,10 @@
         
           <li>
             <a href="/2019/04/03/markdown/">markdown</a>
+          </li>
+        
+          <li>
+            <a href="/2019/04/03/初识git/">markdown</a>
           </li>
         
           <li>
